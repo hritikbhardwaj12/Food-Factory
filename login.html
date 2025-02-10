@@ -1,134 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chutiyapa Login</title>
-    <style>
-        body {
-            background-color: #fafafa;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .login-box {
-            background-color: white;
-            border: 1px solid #dbdbdb;
-            padding: 40px;
-            width: 350px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .login-title {
-            font-family: 'Arial', sans-serif;
-            font-size: 40px;
-            font-weight: bold;
-            color: yellowgreen;
-            margin-bottom: 20px;
-        }
-        .input-field {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #dbdbdb;
-            border-radius: 4px;
-            background-color: #fafafa;
-        }
-        .btn {
-            background-color: yellow;
-            color: black;
-            border: none;
-            padding: 10px;
-            width: 100%;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .btn:disabled {
-            background-color: #b2dffc;
-        }
-        .or-divider {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .or-divider hr {
-            flex-grow: 1;
-            border: none;
-            border-top: 1px solid #dbdbdb;
-        }
-        .or-divider span {
-            margin: 0 10px;
-            color: #8e8e8e;
-            font-weight: bold;
-        }
-        .forgot-password {
-            margin-top: 20px;
-            color: #00376b;
-        }
-        .signup-box {
-            background-color: white;
-            border: 1px solid #dbdbdb;
-            padding: 20px;
-            width: 350px;
-            text-align: center;
-        }
-        .signup-box a {
-            color: #0095f6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Factory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="image/logo.png">
 </head>
-<body>
-    <form action="/login" method="post">
-        {% csrf_token %}
-        <div class="container">
-            <div class="login-box">
-                <div class="login-title">Chutiyapa</div>
-                <!-- Email or Username Input -->
-                <input type="text" class="input-field" name="email" placeholder="Phone number, username, or email" required>
-
-
-                <!-- Password Input -->
-                <input type="password" class="input-field" name="password" placeholder="Password" required>
-
-                <!-- Submit Button (Not a Link) -->
-                <button type="submit" class="btn">Login</button>
-
-                <!-- Divider -->
-                <div class="or-divider">
-                    <hr>
-                    <span>OR</span>
-                    <hr>
-                </div>
-
-                <!-- Forgot Password Link -->
-                <a href="/forgot_password" class="forgot_password">Forgot password?</a>
-            </div>
-
-            <!-- Sign-up Box -->
-            <div class="signup-box">
-                Don't have an account? <a href="/Sign_up">Sign up</a>
-            </div>
+  <div class="background">
+      <!-- Cartoon Images -->
+      <img src="image/17372.jpg" class="cartoon burger" alt="Burger">
+      <img src="image/17372.jpg" class="cartoon noodles" alt="Noodles">
+      <img src="image/17372.jpg" class="cartoon cooldrink" alt="Cooldrink">
+      <img src="image/17372.jpg" class="cartoon sandwich" alt="Sandwich">
+      <img src="image/17372.jpg" class="cartoon popcorn" alt="Popcorn">
+  </div>
+  <div class="login-container">
+      <!-- Company Logo -->
+      <img src="image/logo.png" class="logo" alt="Company Logo">
+      <!-- Input Fields -->
+      <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required>
+          <button type="button" onclick="sendOTP()">Send OTP</button>
+          <input type="text" id="otp" placeholder="Enter OTP" required>
+          <button type="submit">Submit</button>
+           <!-- Add this signup prompt -->
+           <div class="signup-prompt">
+            <span>Don't have an account?</span>
+            <a href="#" onclick="redirectToSignup()" class="signup-link">Sign Up</a>
         </div>
-    </form>
-
-    <!-- Error and Success Messages -->
-    {% if error %}
-        <div style="color: red;">{{ error }}</div>
-    {% endif %}
-
-    {% if success %}
-        <div style="color: green;">{{ success }}</div>
-    {% endif %}
+      </form>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

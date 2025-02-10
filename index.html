@@ -5,110 +5,236 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Factory</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel ="icon" href ="image/logo.png">
+  <link rel="icon" href="image/logo.png">
 </head>
 <body>
+  
   <header>
     <div class="logo">
-      <img src="image/logo.png" alt="Food Factory Logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Search">
-      <img src="image/search-icon.gif" alt="Search Icon"  class="search-icon">
+      <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
     </div>
-      <div class="header-buttons">
-      <button class="login-btn">Login</button>
-      </div>
-      <div>
-        <a href="cart.html">
-          <button class="cart-btn">
-            <img src="image/Mycart.png" alt="Cart" class="cart-icon">
-          </button>
-        </a>
-      </div>
-  </header>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
+    </div>
+  </div>
 
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+  </header>
+  
   <main>
     <section class="hero">
       <img src="image/frontpage.png" alt="Fresh Groceries" class="hero-image">
     </section>
 
     <section class="categories">
-      <h2>Shop by Categories</h2>
+      <h2>FOODS</h2>
       <div class="grid">
-        <div class="card" onclick="window.location.href='apple.html'">
+
+        <!-- Apple Product Card -->
+        <div class="card" data-product-id="apple" data-product-link="apple.html">
           <img src="image/Apple.png" alt="Apple">
           <h3>Apple</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">₹250/kg</p>
+          <button class="add-btn">Add</button>
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
         </div>
-        <div class="card" onclick="window.location.href='alcohol.html'">
+        
+        <!-- Alcohol Product Card -->
+        <div class="card" data-product-id="alcohol" data-product-link="alcohol.html">
           <img src="image/Alcohol.png" alt="Alcohol">
           <h3>Alcohol</h3>
           <p class="price">MRP: ₹500/L</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Cigarette.html'">
-          <img src="image/cigarette.jpeg" alt="cigarette">
+
+        <!-- Cigarette Product Card -->
+        <div class="card" data-product-id="Cigarette" data-product-link="Cigarette.html">
+          <img src="image/cigarette.jpeg" alt="Cigarette">
           <h3>cigarette</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹40/pack</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='lays.html'">
+
+        <!-- Lay's Product Card -->
+        <div class="card" data-product-id="Lays" data-product-link="Lays.html">
           <img src="image/green lays.png" alt="Lays">
           <h3>Lay's</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹20</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Aathe.html'">
+
+        <!-- Aathe Product Card -->
+        <div class="card" data-product-id="Aathe" data-product-link="Aathe.html">
           <img src="image/Aathe.webp" alt="Aathe">
           <h3>Aathe</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹250/0.25kg</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Coca-Cola.html'">
+
+        <!-- Coca-Cola Product Card -->
+        <div class="card" data-product-id="Coca-Cola" data-product-link="Coca-Cola.html">
           <img src="image/cocacola.png" alt="Coca-Cola">
           <h3>Coca-Cola</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹50</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Chicken.html'">
+
+        <!-- Chicken Product Card -->
+        <div class="card" data-product-id="Chicken" data-product-link="Chicken.html">
           <img src="image/chicken.jpg" alt="Chicken">
           <h3>Chicken</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹300/kg</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Roll.html'">
+
+        <!-- Roll Product Card -->
+        <div class="card" data-product-id="Roll" data-product-link="Roll.html">
           <img src="image/roll.jpg" alt="Roll">
           <h3>Roll</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹100</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Peda.html'">
+
+        <!-- Peda Product Card -->
+        <div class="card" data-product-id="Peda" data-product-link="Peda.html">
           <img src="image/peda.jpg" alt="Peda">
           <h3>Peda</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹400/kg</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Rabdi.html'">
+
+        <!-- Rabdi Product Card -->
+        <div class="card" data-product-id="Rabdi" data-product-link="Rabdi.html">
           <img src="image/rabdi.webp" alt="Rabdi">
           <h3>Rabdi</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹150/0.5kg</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Chat.html'">
+
+        <!-- Chat Product Card -->
+        <div class="card" data-product-id="Chat" data-product-link="Chat.html">
           <img src="image/Chat.jpg" alt="Chat">
           <h3>Chat</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹50/plate</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
-        <div class="card" onclick="window.location.href='Dahi.html'">
+
+        <!-- Dahi Product Card -->
+        <div class="card" data-product-id="Dahi" data-product-link="Dahi.html">
           <img src="image/Dahi.jpeg" alt="Dahi">
           <h3>Dahi</h3>
-          <p class="price">MRP: ₹150/kg</p>
+          <p class="price">MRP: ₹30/0.25kg</p>
+          <!-- Add Button with Quantity Control -->
+          <div class="quantity-control" style="display: none;">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
         </div>
       </div>
     </section>
+    <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
   </main>
 
   <footer>
     <p>© 2025 FreshDeliver. All rights reserved.</p>
   </footer>
 
-  <script>
-    function loginFunction() {
-      // Example login functionality. You can enhance this with a real login system.
-      alert("Login functionality is not implemented yet.");
-    }
-  </script>
+  <!-- Add this script to index.html and apple.html -->
+  <!-- Link to your JavaScript file -->
+  <!-- Add this at the end of the <body> section in all HTML files -->
+<script src="script.js"></script>
 </body>
 </html>

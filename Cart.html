@@ -3,34 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cart</title>
+  <title>Food Factory</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="image/logo.png">
 </head>
 <body>
-
+  
   <header>
     <div class="logo">
-      <img src="image/logo.png" alt="Food Factory Logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Search">
       <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
     </div>
-    <div class="header-buttons">
-      <button class="login-btn">Login</button>
-      <button class="cart-btn">
-        <img src="image/Mycart.png" alt="Cart" class="cart-icon">
-      </button>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <h2>My Cart</h2>
-    <div id="cart-items"></div>
-    <button id="checkoutBtn">Proceed to Checkout</button>
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+</head>
+<body>
+
+  <main class="cart-container">
+    <!-- Cart Items will be dynamically generated here -->
+    <div id="cart-items" ></div>
+
+    <!-- Empty Cart Image (Hidden by Default) -->
+    <div id="empty-cart" class="empty-cart" style="display: none;">
+      <img src="image/logo.png" alt="Empty Cart">
+    </div>
+
+    <div id="cart-content">
+      <!-- Bill Details -->
+      <div class="bill-details">
+        <h2>Bill Details</h2>
+        <div class="bill-row">
+          <span>Items total</span>
+          <span id="items-total">₹0</span>
+        </div>
+        <div class="bill-row">
+          <span>Delivery charge</span>
+          <span>₹20</span>
+        </div>
+        <div class="bill-row">
+          <span>Handling charge</span>
+          <span>₹10</span>
+        </div>
+        <div class="bill-row total">
+          <span>Grand total</span>
+          <span id="grand-total">₹30</span>
+        </div>
+      </div>
+
+      <!-- Cancellation Policy -->
+      <div class="cancellation-policy">
+        <h2>Cancellation Policy</h2>
+        <p>Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
+      </div>
+
+      <!-- UPI Payment Button -->
+      <button id="upi-payment-btn" class="upi-payment-btn">Pay via UPI</button>
+      <div class="upi-payment">
+        <h2>Scan & Pay via Paytm UPI</h2>
+        <img src="image/QR.jpg" alt="Paytm UPI QR Code" class="upi-qr">
+        <p>UPI ID: <strong>bhardwajhritil@ooksbi</strong></p>
+      </div>
+    </div>
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>© 2025 FreshDeliver. All rights reserved.</p>
+  </footer>
+  
+<script src="script.js"></script> 
 </body>
 </html>

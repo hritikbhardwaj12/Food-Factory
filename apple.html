@@ -3,79 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apple - Food Factory</title>
+  <title>Food Factory</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel ="icon" href ="image/logo.png">
+  <link rel="icon" href="image/logo.png">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
+    </div>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
+    </div>
+  </div>
+
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
 </head>
 <body>
 
-  <header>
-    <header>
-      <div class="logo">
-        <img src="image/logo.png" alt="Food Factory Logo">
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search">
-        <img src="image/search-icon.gif" alt="Search Icon"  class="search-icon">
-      </div>
-        <div class="header-buttons">
-          <button class="login-btn">Login</button>
-          <a href="cart.html">
-            <button class="cart-btn">
-              <img src="image/Mycart.png" alt="Cart" class="cart-icon">
-            </button>
-          </a>
-        </div>
-    </header>
-  </header>
-
-
-   <!-- Main Content -->
-   <main class="product-container">
-    
+  <!-- Main Content -->
+  <main class="product-container" data-product-id="apple">
     <!-- Left: Image + Product Description -->
-     <div class="product-left">
+    <div class="product-left">
       <div class="product-image">
         <img src="image/Apple.png" alt="Apple">
       </div>
       <!-- Product Description Below Image -->
-       <div class="product-description">
+      <div class="product-description">
         <h3>Product Description</h3>
-        <p>Aathe is a traditional crispy and crunchy snack enjoyed by many. Made from high-quality ingredients, it is perfect for tea-time or as a quick snack.</p>
+        <p>Fresh and juicy Turkish apples, perfect for a healthy snack. Grown with care and delivered fresh to your doorstep.</p>
 
-      <h3>Ingredients</h3>
-      <ul>
-        <li>Wheat Flour</li>
-        <li>Spices & Herbs</li>
-        <li>Edible Oil</li>
-      </ul>
+        <h3>Ingredients</h3>
+        <ul>
+          <li>100% Natural Turkish Apples</li>
+        </ul>
 
-      <h3>Storage Instructions</h3>
-      <p>Store in a cool and dry place. Keep away from direct sunlight.</p>
+        <h3>Storage Instructions</h3>
+        <p>Store in a cool and dry place. Refrigerate for longer freshness.</p>
 
-      <h3>Why Choose Us?</h3>
-      <p>✅ Freshly prepared <br> ✅ Premium quality ingredients <br> ✅ Quick delivery</p>
+        <h3>Why Choose Us?</h3>
+        <p>✅ Freshly picked <br> ✅ Premium quality <br> ✅ Turkish Apple</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Right: Product Details -->
-  <div class="product-details">
-    <h2>Apple - ₹40/pack</h2>
-    <p><strong>Delivery Date:</strong> Same Day</p>
-    <p>Delicious and crunchy Aathe, a perfect snack.</p>
-    
-    <button id="buyNowBtn" class="btn buy-now">Buy Now</button>
-    <button id="addToCartBtn" class="btn add-to-cart">Add to Cart</button>
-    <button id="goToCartBtn" class="btn go-to-cart">Go to Cart</button>
-  
-  </div>
+    <!-- Right: Product Details -->
+    <div class="product-details">
+      <h2>Apple - ₹250/kg</h2>
+      <p><strong>Delivery Date:</strong>Every Friday</p>
+      <p>A perfect healthy snack.</p>
 
-</main>
+      <!-- Add Button with Quantity Control -->
+      <button class="add-btn">Add</button>
+      <div class="quantity-control" style="display: none;">
+        <button class="quantity-btn minus">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn plus">+</button>
+      </div>
+    </div>
+  </main>
 
-<!-- Link to your JavaScript file -->
-<script src="C:\Users\bhard\OneDrive\Desktop\WebDev\foodfactory\script.js"></script>
+  <!-- Link to your JavaScript file -->
 <script src="script.js"></script>
-
 </body>
 </html>
   

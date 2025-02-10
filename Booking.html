@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Factory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="image/logo.png">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
+    </div>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
+    </div>
+  </div>
+
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+    <section class="booking-form">
+        <form id="carBookingForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required placeholder="Enter 10-digit number">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="license">Upload Driving License:</label>
+            <input type="file" id="license" name="license" accept="image/*" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -3,40 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cigarette - Food Factory</title>
+  <title>Food Factory</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel ="icon" href ="image/logo.png">
+  <link rel="icon" href="image/logo.png">
 </head>
 <body>
-
+  
   <header>
-    <header>
-      <div class="logo">
-        <img src="image/logo.png" alt="Food Factory Logo">
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search">
-        <img src="image/search-icon.gif" alt="Search Icon"  class="search-icon">
-      </div>
-        <div class="header-buttons">
-        <button class="login-btn">Login</button>
-        <a href="cart.html">
-          <button class="cart-btn">
-            <img src="image/Mycart.png" alt="Cart" class="cart-icon">
-          </button>
-        </a>
-      </div>
-    </header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
+    </div>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
+    </div>
+  </div>
+
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+    <div class="overlay" id="overlay"></div>
   </header>
+<body>
 
   <!-- Main Content -->  
 
-  <main class="product-container">
+  <main class="product-container" data-product-id="Cigarette">
     
     <!-- Left: Image + Product Description -->
      <div class="product-left">
       <div class="product-image">
-        <img src="image/Aathe.webp" alt="Aathe">
+        <img src="image/cigarette.jpeg" alt="Cigarette">
       </div>
 
 
@@ -62,15 +82,21 @@
 
   <!-- Right: Product Details -->
   <div class="product-details">
-    <h2>Aathe - ₹40/pack</h2>
+    <h2>cigarette- ₹40/pack</h2>
     <p><strong>Delivery Date:</strong> Same Day</p>
     <p>Delicious and crunchy Aathe, a perfect snack.</p>
 
-    <button class="btn buy-now">Buy Now</button>
-    <button class="btn add-to-cart">Add to Cart</button>
-    <button class="btn go-to-cart">Go to Cart</button>
+    <!-- Add Button with Quantity Control -->
+    <button class="add-btn">Add</button>
+    <div class="quantity-control" style="display: none;">
+      <button class="quantity-btn minus">-</button>
+      <span class="quantity">1</span>
+      <button class="quantity-btn plus">+</button>
+    </div>
   </div>
-
 </main>
+
+<!-- Link to your JavaScript file -->
+<script src="script.js"></script>
 </body>
 </html>

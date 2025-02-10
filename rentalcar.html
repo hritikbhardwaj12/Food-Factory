@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Factory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="image/logo.png">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/logo.png" alt="Food Factory Logo" class="main-logo">
+    </a>
+    <a href="rentalcar.html">
+        <img src="image/Rentalcar.png" alt="Second Logo" class="second-logo">
+    </a>
+      
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <img src="image/search-icon.gif" alt="Search Icon" class="search-icon">
+    </div>
+     <!-- Account Dropdown -->
+       <!-- Account Button -->
+  <div class="account-section">
+    <button class="account-btn" id="accountBtn">
+      <span>Account</span>
+    </button>
+    <!-- Dropdown -->
+    <div class="account-dropdown">
+      <div class="dropdown-item">Address</div>
+      <div class="dropdown-item">Orders</div>
+      <a href="login.html" class="dropdown-item">Logout</a>
+    </div>
+  </div>
+
+  
+    <div class="header-buttons">
+      <a href="cart.html">
+        <button class="cart-btn">
+          <img src="image/Mycart.png" alt="Cart" class="cart-icon">
+        </button>
+      </a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+</head>
+<body>
+
+    <section class="car-container">
+        <!-- Car 1 -->
+        <div class="car-card">
+            <img src="image/sedancar.jpg" alt="Sedan">
+            <h2>Sedan</h2>
+            <p>Comfortable and fuel-efficient, ideal for city rides and long drives.</p>
+            <button class="book-btn" onclick="bookCar('Sedan')">Book Now</button>
+        </div>
+
+        <!-- Car 2 -->
+        <div class="car-card">
+            <img src="image/xuvcar.jpeg" alt="SUV">
+            <h2>SUV</h2>
+            <p>Spacious and powerful, perfect for off-road trips and family travel.</p>
+            <button class="book-btn" onclick="bookCar('SUV')">Book Now</button>
+        </div>
+
+        <!-- Car 3 -->
+        <div class="car-card">
+            <img src="image/hatchbackcar.jpeg" alt="Hatchback">
+            <h2>Hatchback</h2>
+            <p>Compact and economical, best for city driving and easy parking.</p>
+            <button class="book-btn" onclick="bookCar('Hatchback')">Book Now</button>
+        </div>
+
+        <!-- Car 4 -->
+        <div class="car-card">
+            <img src="image/Luxurycar.jpeg" alt="Luxury Car">
+            <h2>Luxury Car</h2>
+            <p>Experience the best in class comfort and style with premium cars.</p>
+            <button class="book-btn" onclick="bookCar('Luxury Car')">Book Now</button>
+        </div>
+
+        <!-- Car 5 -->
+        <div class="car-card">
+            <img src="image/Electriccar.jpeg" alt="Electric Car">
+            <h2>Electric Car</h2>
+            <p>Eco-friendly and efficient, the future of transportation.</p>
+            <button class="book-btn" onclick="bookCar('Electric Car')">Book Now</button>
+        </div>
+
+        <!-- Bilke -->
+        <div class="car-card">
+          <img src="image/Bike.jpg" alt="Bike">
+          <h2>Bike</h2>
+          <p>Eco-friendly and efficient, the future of transportation.</p>
+          <button class="book-btn" onclick="bookCar('Electric Car')">Book Now</button>
+      </div>
+
+      <!-- scooty -->
+      <div class="car-card">
+        <img src="image/scooty.jpeg" alt="scooty">
+        <h2>Scooty</h2>
+        <p>Eco-friendly and efficient, the future of transportation.</p>
+        <button class="book-btn" onclick="bookCar('Electric Car')">Book Now</button>
+    </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

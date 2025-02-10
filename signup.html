@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Factory</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="image/logo.png">
+</head>
+  <div class="background">
+      <!-- Cartoon Images -->
+      <img src="image/17372.jpg" class="cartoon burger" alt="Burger">
+      <img src="image/17372.jpg" class="cartoon noodles" alt="Noodles">
+      <img src="image/17372.jpg" class="cartoon cooldrink" alt="Cooldrink">
+      <img src="image/17372.jpg" class="cartoon sandwich" alt="Sandwich">
+      <img src="image/17372.jpg" class="cartoon popcorn" alt="Popcorn">
+  </div>
+  <div class="login-container">
+      <!-- Company Logo -->
+      <img src="image/logo.png" class="logo" alt="Company Logo">
+      <!-- Input Fields -->
+      <form id="loginForm" onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Name" required>
+  
+        <!-- Hostel Dropdown -->
+        <select id="hostel" required>
+          <option value="">Select Hostel</option>
+          <option value="Hostel A">BH-1</option>
+          <option value="Hostel B">BH-2</option>
+          <option value="Hostel C">GH-1</option>
+        </select>
+
+        <!-- Room Number Input -->
+      <input type="number" id="room" placeholder="Room Number" 
+      min="1" max="99" required>
+      <div id="roomError" class="error-message">Please enter a valid room number (1-99)</div>
+
+      <!-- Mobile Number Input -->
+      <input type="tel" id="mobileNo" placeholder="Mobile No." 
+pattern="[0-9]{10}" maxlength="10" required>
+<div id="mobileError" class="error-message">Please enter a valid 10-digit mobile number</div>
+
+<input type="email" id="email" placeholder="Email" required>
+<button type="button" onclick="sendOTP()">Send OTP</button>
+<input type="text" id="otp" placeholder="Enter OTP" required>
+<button type="submit">Submit</button>
+    <div class="login-prompt">
+      <span>Already have an account?</span>
+      <a href="#" onclick="redirectToLogin()" class="login-link">Login</a>
+    </div>
+      </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
